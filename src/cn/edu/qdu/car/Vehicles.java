@@ -15,9 +15,9 @@ public class Vehicles {
 	}
 	//方法
 	//计算租金
-	public double rentFee(int days){
-		return dayRates*days;
-	}
+//	public double rentFee(int days){
+//		return dayRates*days;
+//	}
 	
 	//显示车辆信息
 	public void show(){

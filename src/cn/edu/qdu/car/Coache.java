@@ -10,16 +10,16 @@ public class Coache extends Vehicles {
 		super(licensePlateNumber);
 	}
 	//方法
-	@Override
+//	@Override
 	//计算租金
-	public double rentFee(int days){
-		if(seatNumber<=16){
-			setDayRates(800);
-		}else{
-			setDayRates(1500);
-		}
-		return super.rentFee(days);
-	}
+//	public double rentFee(int days){
+//		if(seatNumber<=16){
+//			setDayRates(800);
+//		}else{
+//			setDayRates(1500);
+//		}
+//		return super.rentFee(days);
+//	}
 	
 	@Override
 	public void show(){

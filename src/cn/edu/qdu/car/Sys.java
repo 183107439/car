@@ -9,6 +9,7 @@ public class Sys {
 	//初始化块
 	//构造方法
 	//方法
+	//租车
 	public void rentVehicle(){
 		String[] carBrand={"别克","宝马","奥迪"};  //汽车品牌
 		int[] coacheSeatNumber={16,32};		//客车座位数
@@ -37,7 +38,8 @@ public class Sys {
 					int rentedDays=input.nextInt();
 					vehicles[i].setRentedDays(rentedDays);
 					//总租金增加
-					totalFee=totalFee+vehicles[i].rentFee(rentedDays);
+					//totalFee=totalFee+vehicles[i].rentFee(rentedDays);
+					totalFee=totalFee+rentFee(vehicles[i],rentedDays);
 				}
 				System.out.println("您所租的汽车有：");
 				System.out.println("品牌\t日租金\t租车天数\t车牌号");
@@ -64,7 +66,8 @@ public class Sys {
 					int rentedDays=input.nextInt();
 					vehicles[i].setRentedDays(rentedDays);
 					//总租金增加
-					totalFee=totalFee+vehicles[i].rentFee(rentedDays);
+					//totalFee=totalFee+vehicles[i].rentFee(rentedDays);
+					totalFee=totalFee+rentFee(vehicles[i],rentedDays);
 				}
 				System.out.println("您所租的客车有：");
 				System.out.println("品牌\t座位数\t租车天数\t车牌号");
@@ -78,6 +81,29 @@ public class Sys {
 		}while(key.equalsIgnoreCase("y"));
 		//输出总租金
 		System.out.println("租金一共："+totalFee+"元");
+	}
+	
+	//计算租金
+	public double rentFee(Vehicles vehicle,int days){
+		if(vehicle instanceof Car){
+			if(((Car) vehicle).getBrand().equals("别克")){
+				vehicle.setDayRates(400);
+			}else if(((Car) vehicle).getBrand().equals("宝马")){
+				vehicle.setDayRates(500);
+			}else{
+				vehicle.setDayRates(600);
+			}
+			//return vehicle.getDayRates()*days;
+		}
+		else{
+			if(((Coache)vehicle).getSeatNumber()<=16){
+				vehicle.setDayRates(800);
+			}else{
+				vehicle.setDayRates(1500);
+			}
+			//return 
+		}
+		return vehicle.getDayRates()*days;
 	}
 	
 }

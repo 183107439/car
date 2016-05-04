@@ -11,18 +11,18 @@ public class Car extends Vehicles {
 		super(lincensePlateNumber);
 	}
 	//方法
-	@Override
-	//计算租金
-	public double rentFee(int days){
-		if(brand.equals("别克")){
-			setDayRates(400);
-		}else if(brand.equals("宝马")){
-			setDayRates(500);
-		}else{
-			setDayRates(600);
-		}
-		return super.rentFee(days);
-	}
+//	@Override
+//	//计算租金
+//	public double rentFee(int days){
+//		if(brand.equals("别克")){
+//			setDayRates(400);
+//		}else if(brand.equals("宝马")){
+//			setDayRates(500);
+//		}else{
+//			setDayRates(600);
+//		}
+//		return super.rentFee(days);
+//	}
 	
 	@Override
 	public void show(){
