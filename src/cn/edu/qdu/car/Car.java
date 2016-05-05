@@ -7,8 +7,9 @@ public class Car extends Vehicles {
 	//初始化块
 	
 	//构造方法
-	public Car(String lincensePlateNumber){
+	public Car(String lincensePlateNumber,String brand){
 		super(lincensePlateNumber);
+		this.brand=brand;
 	}
 	//方法
 //	@Override
@@ -25,10 +26,10 @@ public class Car extends Vehicles {
 //	}
 	
 	@Override
-	public void show(){
+	public void show(int ratedDays){
 		//System.out.println("品牌\t日租金\t车牌号");
 		System.out.print(brand+"\t");
-		super.show();
+		super.show(ratedDays);
 	}
 	
 	public String getBrand() {

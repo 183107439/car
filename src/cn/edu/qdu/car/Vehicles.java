@@ -4,7 +4,7 @@ public class Vehicles {
 	//属性
 	private String licensePlateNumber;	//车牌号
 	private int dayRates;  //日租金
-	private int rentedDays; //记录被租天数
+	//private int rentedDays; //记录被租天数-----不是属性
 	
 	//静态块
 	//初始化块
@@ -20,7 +20,7 @@ public class Vehicles {
 //	}
 	
 	//显示车辆信息
-	public void show(){
+	public void show(int rentedDays){
 		System.out.println(dayRates+"\t"+rentedDays+"\t"+licensePlateNumber);
 	}
 	
@@ -46,14 +46,6 @@ public class Vehicles {
 	
 	public void setLicensePlateNumber(String licensePlateNumber) {
 		this.licensePlateNumber = licensePlateNumber;
-	}
-	
-	public int getRentedDays() {
-		return rentedDays;
-	}
-	
-	public void setRentedDays(int rentedDays) {
-		this.rentedDays = rentedDays;
 	}
 	
 }

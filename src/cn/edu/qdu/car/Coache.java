@@ -6,8 +6,9 @@ public class Coache extends Vehicles {
 	//静态块
 	//初始化块
 	//构造方法
-	public Coache(String licensePlateNumber){
+	public Coache(String licensePlateNumber,int seatNumber){
 		super(licensePlateNumber);
+		this.seatNumber=seatNumber;
 	}
 	//方法
 //	@Override
@@ -22,10 +23,10 @@ public class Coache extends Vehicles {
 //	}
 	
 	@Override
-	public void show(){
+	public void show(int rentedDays){
 		//System.out.println("品牌\t座位数\t车牌号");
 		System.out.print(seatNumber+"\t");
-		super.show();
+		super.show(rentedDays);
 	}
 	
 	public int getSeatNumber() {
