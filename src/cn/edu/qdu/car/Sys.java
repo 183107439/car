@@ -17,7 +17,7 @@ public class Sys {
 		Scanner input=new Scanner(System.in);
 		System.out.println("请问您想租多少辆车？");
 		int count=input.nextInt();
-		//Vehicles[] vehicles;
+		vehicles=new Vehicles[count];
 		int[] rentedDays=new int[count];
 		
 		int carNo=11111;
@@ -33,7 +33,9 @@ public class Sys {
 				System.out.println("请选择汽车的品牌：");
 				System.out.println("1.别克\t2.宝马\t3.奥迪");
 				int choice2=input.nextInt();
-				String lincensePlateNumber="鲁B"+carNo;
+				String lincensePlateNumber="鲁B"+carNo;		
+//				System.out.println(lincensePlateNumber);
+//				System.out.println(choice2+carBrand[choice2-1]);
 				vehicles[i]=new Car(lincensePlateNumber,carBrand[choice2-1]);
 				System.out.println("请问您想租多少天？");
 				rentedDays[i]=input.nextInt();
@@ -51,6 +53,7 @@ public class Sys {
 			}
 		}		
 		//显示所租的所有车辆
+		System.out.println("车型\t型号/座位数\t日租金\t租车天数\t车牌号");
 		showAllRentedVehicles(vehicles,rentedDays);
 		//输出总租金
 		System.out.println("租金一共："+totalFee+"元");

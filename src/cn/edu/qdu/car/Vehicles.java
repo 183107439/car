@@ -21,7 +21,7 @@ public class Vehicles {
 	
 	//显示车辆信息
 	public void show(int rentedDays){
-		System.out.println(dayRates+"\t"+rentedDays+"\t"+licensePlateNumber);
+		System.out.println(dayRates+"\t\t\t"+rentedDays+"\t"+licensePlateNumber);
 	}
 	
 	public String getLincensePlateNumber() {
